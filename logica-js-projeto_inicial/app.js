@@ -1,10 +1,16 @@
+// Curso Lógica de Programação:
+//  -mergulhe em programação com JavaScript
+
 alert("Olá Mundo!");
 
-let numeroSecreto = 29;
-let resposta = prompt("Escolha entre o número 1 e 30");
+let numeroSecreto = 8;
+let resposta = prompt("Escolha entre o número 1 e 10");
 
 if(numeroSecreto == resposta) {
-    console.log("Você acertou o número secreto! Parabéns!!");
+    alert(`Você acertou o número secreto: (${numeroSecreto}). Parabéns!`);
 } else {
-    console.log("Você errou o número secreto. Tente novamente!")
-}
+    alert("Você errou o número secreto. Tente novamente!");
+};
+
+console.log(resposta);
+console.log(numeroSecreto == resposta);

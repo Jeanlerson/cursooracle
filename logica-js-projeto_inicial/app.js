@@ -1,23 +1,31 @@
 // Curso Lógica de Programação:
 //  -mergulhe em programação com JavaScript
-/*
+
 alert("Olá Mundo!");
 
 let numeroSecreto = 8;
-let resposta = prompt("Escolha entre o número 1 e 10");
+let resposta
 
-if(numeroSecreto == resposta) {
-    alert(`Você acertou o número secreto: (${numeroSecreto}). Parabéns!`);
-} else {
-    alert("Você errou o número secreto. Tente novamente!");
-};
+while( numeroSecreto != resposta ) {
+    resposta = prompt("Escolha entre o número 1 e 10");
+
+    if(numeroSecreto == resposta) {
+        alert(`Você acertou o número secreto: (${numeroSecreto}). Parabéns!`);
+    } else {
+        if(numeroSecreto > resposta) {
+            alert(`O número secreto é maior que ${resposta}`);
+        } else {
+            alert(`O número secreto é menor que ${resposta}`);
+        }
+    };
+}
 
 console.log(resposta);
 console.log(numeroSecreto == resposta);
-*/
+
 
 //-------------ATV 1----------------
-
+/*
 alert("Olá! Tudo bem?");
 
 let respostaSemana = prompt("Qual o dia da semana?");
@@ -46,3 +54,4 @@ if(number < 0) {
 } else {
     alert("Seu número é positivo")
 }
+*/

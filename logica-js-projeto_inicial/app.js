@@ -1,27 +1,31 @@
 // Curso Lógica de Programação:
 //  -mergulhe em programação com JavaScript
-
+/*
 alert("Olá Mundo!");
 
 let numeroSecreto = 8;
-let resposta
+let resposta;
+let tentativas = 1;
+
 
 while( numeroSecreto != resposta ) {
     resposta = prompt("Escolha entre o número 1 e 10");
 
     if(numeroSecreto == resposta) {
-        alert(`Você acertou o número secreto: (${numeroSecreto}). Parabéns!`);
+        alert(`Você acertou o número secreto: (${numeroSecreto}). Com ${tentativas} tentativas. Parabéns!`);
     } else {
         if(numeroSecreto > resposta) {
             alert(`O número secreto é maior que ${resposta}`);
         } else {
             alert(`O número secreto é menor que ${resposta}`);
         }
+        tentativas++;
     };
-}
+};
 
 console.log(resposta);
 console.log(numeroSecreto == resposta);
+*/
 
 
 //-------------ATV 1----------------
@@ -55,3 +59,36 @@ if(number < 0) {
     alert("Seu número é positivo")
 }
 */
+
+//-------------ATV 1 aula 3----------------
+let num = 1
+
+while(num < 11) {
+    console.log(num)
+    num++
+}
+
+//-------------ATV 2 aula 3----------------
+let numDec = 10
+
+while(numDec >= 0) {
+    console.log(numDec);
+    numDec--;
+}
+
+//-------------ATV 3 aula 3----------------
+let numeroDec = prompt("Digite um número:");
+
+while(numeroDec >= 0) {
+    console.log(`Número: ${numeroDec}`);
+    numeroDec--;
+}
+
+//-------------ATV 4 aula 3----------------
+let numMax = prompt("Digite um número:");
+let numIncrementado = 0;
+
+while(numIncrementado <= numMax) {
+    console.log(`Número Incrementado: ${numIncrementado}`);
+    numIncrementado++;
+};

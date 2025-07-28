@@ -3,7 +3,7 @@
 /*
 alert("Olá Mundo!");
 
-let numeroSecreto = 8;
+let numeroSecreto = parseInt(Math.random() * 10 + 1);
 let resposta;
 let tentativas = 1;
 
@@ -12,7 +12,7 @@ while( numeroSecreto != resposta ) {
     resposta = prompt("Escolha entre o número 1 e 10");
 
     if(numeroSecreto == resposta) {
-        alert(`Você acertou o número secreto: (${numeroSecreto}). Com ${tentativas} tentativas. Parabéns!`);
+        break;
     } else {
         if(numeroSecreto > resposta) {
             alert(`O número secreto é maior que ${resposta}`);
@@ -23,9 +23,12 @@ while( numeroSecreto != resposta ) {
     };
 };
 
+let nomeTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+alert(`Você acertou o número secreto: (${numeroSecreto}). Com ${tentativas} ${nomeTentativa}. Parabéns!`);
+
 console.log(resposta);
-console.log(numeroSecreto == resposta);
 */
+
 
 
 //-------------ATV 1----------------
@@ -59,7 +62,7 @@ if(number < 0) {
     alert("Seu número é positivo")
 }
 */
-
+/*
 //-------------ATV 1 aula 3----------------
 let num = 1
 
@@ -92,3 +95,18 @@ while(numIncrementado <= numMax) {
     console.log(`Número Incrementado: ${numIncrementado}`);
     numIncrementado++;
 };
+*/
+
+//-------------ATV 1 aula 4----------------
+let nota = prompt("Qual nota você tirou?")
+
+situacao = nota >= 7 ? "Aprovado" : "Repronvado";
+
+alert(`Você foi ${situacao}!`)
+
+//-------------ATV 2 e 3 aula 4----------------
+numero1 = parseInt(Math.random() * 10 + 1)
+console.log(`Número entre 1 e 10: ${numero1}`)
+
+numero2 = parseInt(Math.random() * 1000 + 1)
+console.log(`Número entre 1 e 1000: ${numero2}`)

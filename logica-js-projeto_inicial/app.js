@@ -1,15 +1,16 @@
 // Curso Lógica de Programação:
 //  -mergulhe em programação com JavaScript
-/*
+
 alert("Olá Mundo!");
 
-let numeroSecreto = parseInt(Math.random() * 10 + 1);
+let numeroMax = 100;
+let numeroSecreto = parseInt(Math.random() * numeroMax + 1);
 let resposta;
 let tentativas = 1;
 
 
 while( numeroSecreto != resposta ) {
-    resposta = prompt("Escolha entre o número 1 e 10");
+    resposta = prompt(`Escolha entre o número 1 e ${numeroMax}`);
 
     if(numeroSecreto == resposta) {
         break;
@@ -27,7 +28,7 @@ let nomeTentativa = tentativas > 1 ? "tentativas" : "tentativa";
 alert(`Você acertou o número secreto: (${numeroSecreto}). Com ${tentativas} ${nomeTentativa}. Parabéns!`);
 
 console.log(resposta);
-*/
+
 
 
 
@@ -96,7 +97,7 @@ while(numIncrementado <= numMax) {
     numIncrementado++;
 };
 */
-
+/*
 //-------------ATV 1 aula 4----------------
 let nota = prompt("Qual nota você tirou?")
 
@@ -110,3 +111,4 @@ console.log(`Número entre 1 e 10: ${numero1}`)
 
 numero2 = parseInt(Math.random() * 1000 + 1)
 console.log(`Número entre 1 e 1000: ${numero2}`)
+*/

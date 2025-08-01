@@ -1,14 +1,23 @@
-let title = document.querySelector("h1");
-let paragraph = document.querySelector("p");
+let numeroSecreto = gerarNumero();
 
-title.innerHTML = "Número Secreto";
-paragraph.innerHTML = "Escolha um número entre 1 e 10";
+function seletor(tag, texto) {
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+}
+
+seletor("h1", "Número Secreto");
+seletor("p", "Escolha um número entre 1 e 10");
 
 function checkKick() {
-    console.log("ta funcionando");
+    let chute = document.querySelector("input").value
+    console.log(chute == numeroSecreto);
 };
+function gerarNumero() {
+    return parseInt(Math.random() * 10 + 1);
+}
 
 
+/*
 // ------------Atividade 1.1-------------
 function alertInterative() {
     alert("Eu amo JS");
@@ -28,3 +37,4 @@ function somaButton() {
 
     alert(`O resultado da soma dos números é: ${resultSoma}`)
 }
+*/

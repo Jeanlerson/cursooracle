@@ -1,20 +1,48 @@
 let numeroSecreto = gerarNumero();
+let tentativas = 1;
 
 function seletor(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-}
-
-seletor("h1", "Número Secreto");
-seletor("p", "Escolha um número entre 1 e 10");
-
+};
+function msgInicial() {
+    seletor("h1", "Número Secreto");
+    seletor("p", "Escolha um número entre 1 e 10");
+};
+msgInicial();
 function checkKick() {
     let chute = document.querySelector("input").value
-    console.log(chute == numeroSecreto);
+    if(chute == numeroSecreto) {
+        let wordTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+        let msgTentativa = `Você descobriu o número secreto com ${tentativas} ${wordTentativa}.`;
+
+        seletor("h1", "Parabéns! Você acertou!");
+        seletor("p", msgTentativa);
+        document.getElementById("reiniciar").removeAttribute("disabled");
+    } else {
+        if(chute > numeroSecreto) {
+            seletor("p", "O número secreto é menor");
+        } else {
+            seletor("p", "O núemro secreto é maior");
+        }
+        tentativas++
+        clean();
+    }
 };
 function gerarNumero() {
     return parseInt(Math.random() * 10 + 1);
-}
+};
+function clean() {
+    chute = document.querySelector('input');
+    chute.value = "";
+};
+function restartGame() {
+    numeroSecreto = gerarNumero();
+    clean();
+    tentativas = 1;
+    msgInicial();
+    document.getElementById("reiniciar").setAttribute("disabled", true);
+};
 
 
 /*

@@ -66,3 +66,11 @@ function somaButton() {
     alert(`O resultado da soma dos números é: ${resultSoma}`)
 }
 */
+
+function imc(peso, altura) {
+    peso = parseInt(prompt("Digite seu peso:"));
+    altura = parseInt(prompt("Digite sua altura:"));
+    let imc = peso / (altura * altura);
+
+    alert(imc);
+}

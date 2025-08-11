@@ -1,3 +1,5 @@
+let listaNumeros = [];
+let numeroLimite = 10;
 let numeroSecreto = gerarNumero();
 let tentativas = 1;
 
@@ -30,7 +32,19 @@ function checkKick() {
     }
 };
 function gerarNumero() {
-    return parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let qtNumeroEscolhido = listaNumeros.length;
+
+    if(qtNumeroEscolhido == numeroLimite) {
+        listaNumeros = [];
+    }
+    if(listaNumeros.includes(numeroEscolhido)) {
+        return gerarNumero();
+    } else {
+        console.log(listaNumeros)
+        listaNumeros.push(numeroEscolhido);
+        return numeroEscolhido;
+    }
 };
 function clean() {
     chute = document.querySelector('input');

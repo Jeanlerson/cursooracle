@@ -6,6 +6,7 @@ let tentativas = 1;
 function seletor(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate: 1.2});
 };
 function msgInicial() {
     seletor("h1", "Número Secreto");
@@ -25,7 +26,7 @@ function checkKick() {
         if(chute > numeroSecreto) {
             seletor("p", "O número secreto é menor");
         } else {
-            seletor("p", "O núemro secreto é maior");
+            seletor("p", "O número secreto é maior");
         }
         tentativas++
         clean();
@@ -59,6 +60,7 @@ function restartGame() {
 };
 
 
+
 /*
 // ------------Atividade 1.1-------------
 function alertInterative() {
@@ -80,7 +82,7 @@ function somaButton() {
     alert(`O resultado da soma dos números é: ${resultSoma}`)
 }
 */
-
+/*
 function imc(peso, altura) {
     peso = parseInt(prompt("Digite seu peso:"));
     altura = parseInt(prompt("Digite sua altura:"));
@@ -88,3 +90,10 @@ function imc(peso, altura) {
 
     alert(imc);
 }
+
+
+let lingProg = ['js', 'ruby', 'c++'];
+console.log(lingProg);
+
+lingProg.push('java', 'goLang');
+*/

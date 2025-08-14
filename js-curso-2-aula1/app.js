@@ -10,7 +10,7 @@ function seletor(tag, texto) {
 };
 function msgInicial() {
     seletor("h1", "Número Secreto");
-    seletor("p", "Escolha um número entre 1 e 10");
+    seletor("p", "Digite um número entre 1 e 10");
 };
 msgInicial();
 function checkKick() {
